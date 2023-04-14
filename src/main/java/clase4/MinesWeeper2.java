@@ -61,10 +61,10 @@ public class MinesWeeper2 {
             }
         }
 
-        mostrarTablero(boardSolution);
+        seeBoard(boardSolution);
     }
 
-    public static void mostrarTablero(String[][] board) {
+    public static void seeBoard(String[][] board) {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
                 System.out.print(board[i][j] + "\t");
@@ -92,14 +92,14 @@ public class MinesWeeper2 {
 
             if (board[row][column] == "x"){
                 System.out.println("Perdiste! mina encontrada");
-                mostrarTablero(board);
+                seeBoard(board);
                 finish = true;
             }else{
 
                 boardSolution[row][column] = "+";
                 board[row][column] = "+";
 
-                mostrarTablero(boardSolution);
+                seeBoard(boardSolution);
                 winner --;
             }
 
