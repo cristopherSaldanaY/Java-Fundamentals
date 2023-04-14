@@ -2,7 +2,7 @@ package clase4;
 
 import java.util.Scanner;
 
-public class MinesWeeper2 {
+public class MinesWeeper {
 
     static String[][] board;
     static String [][] boardSolution;
